@@ -8,8 +8,6 @@ const swap = (element1, element2) => {
 // Disables sorting buttons used in conjunction with enable
 const disableSortingBtn = () => {
     document.querySelector(".bubbleSort").disabled = true;
-    document.querySelector(".bucketSort").disabled = true;
-    document.querySelector(".countingSort").disabled = true;
     document.querySelector(".heapSort").disabled = true;
     document.querySelector(".insertionSort").disabled = true;
     document.querySelector(".mergeSort").disabled = true;
@@ -20,8 +18,6 @@ const disableSortingBtn = () => {
 // Enables sorting buttons used in conjunction with disable
 const enableSortingBtn = () => {
     document.querySelector(".bubbleSort").disabled = false;
-    document.querySelector(".bucketSort").disabled = false;
-    document.querySelector(".countingSort").disabled = false;
     document.querySelector(".heapSort").disabled = false;
     document.querySelector(".insertionSort").disabled = false;
     document.querySelector(".mergeSort").disabled = false;
@@ -100,7 +96,7 @@ const createNewArray = (noOfBars = 60) => {
     barArray = []
     
     for (let i = 0; i < noOfBars; i++) {
-        barArray.push(Math.floor(Math.random() * 251));
+        barArray.push(Math.floor(Math.random() * 196 + 5)); // max = 200 min = 5
     }
     
     console.log(barArray)
